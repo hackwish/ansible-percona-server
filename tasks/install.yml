@@ -11,6 +11,9 @@
   tags:
     - percona-server-install-configure-debconf
 
+- name: install | Wait for update cache
+  wait_for: timeout=15
+
 - name: install | dependencies
   apt:
     name: "{{ item }}"

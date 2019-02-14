@@ -42,7 +42,6 @@
   apt:
     deb: /tmp/percona-release_latest.{{ ansible_distribution_release | lower }}_all.deb
     update_cache: yes
-    delay: 15
 
 - name: repository | apt-pin packages
   copy:
